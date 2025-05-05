@@ -10,9 +10,8 @@ def S(n):
     v[1:] = np.log(np.arange(1,n))
     return v/n/np.log(n) # not n-1 ?
 
-def Q(n):
+def Q(n,pp):
     i = np.arange(1,n) # indices
-    pp = np.sum(A)/n/(n-1) # ref prob
 
     p = pp**i*(1-pp)**(n-1-i)*comb(n-2,i-1) # ref entry prob
     p0 = (1-pp) 
@@ -33,7 +32,7 @@ def Q(n):
 # %%
 
 path = "sheep.txt"  
-path = "rhesus.txt"  
+#path = "rhesus.txt"  
 
 G = nx.read_edgelist(f"graphs/{path}")
 A = nx.to_numpy_array(G)
@@ -43,10 +42,14 @@ e = G.number_of_edges()
 
 k = np.sum(A,axis=0) # degrees
 d = np.sum(k[:, None] == np.arange(n),axis=0) # degree dist
+p = e*2/n/(n-1)
 
 print(f"n: {n}")
-print(f"p: {e*2/n/(n-1)}")
+print(f"p: {p}")
 print(f"S: {np.dot(S(n),d)}")
-print(f"C: {np.dot(S(n),d)*np.dot(Q(n),d)}")
+print(f"C: {np.dot(S(n),d)*np.dot(Q(n,p),d)}")
+
+# %%
+Q(28,1)
 
 # %%
