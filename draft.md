@@ -22,7 +22,7 @@
 - "complexity" : $C(P):= E[Q(P,R_k)S(P)]$ <- only dependent on degree dist
 
 ### Some Calculations
-- degree distribution: $d_a := |\{i:k_i=a\}|$
+- degree distribution: $d_a := | \{ i:k_i=a \} |$
 
 - probability of entry $1/x$ in $R_k$ : $a_x$ ($x=0$ means entry is 0)
     - idependence, nonezero if edge exists, p * bernoulli dist
