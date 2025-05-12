@@ -22,7 +22,7 @@
 - "complexity" : $C(P):= E[Q(P,R_k)S(P)]$ <- only dependent on degree dist
 
 ### Some Calculations
-- degree distribution: $d_a := | \{ i:k_i=a \} |$
+- degree distribution: $d_a $
 
 - probability of entry $1/x$ in $R_k$ : $a_x$ ($x=0$ means entry is 0)
     - idependence, nonezero if edge exists, p * bernoulli dist
@@ -56,6 +56,6 @@
 - $Q$ can be represented as scalar product of special vector $v$ and degree dist -> only dependent on degree dist, not who connects to who
 - checked with sheeps and rhesus (dist and E) (they messed up n-1), why only n=100?
 - counter examples same degree dist different intuitive complexity
-- can allways be done if all nodes are reated the same in reference
+- can allways be done if all nodes are treated the same in reference
 - quote"mesures based on degree dist have little power"
 - quote"so far no analytical expression found"
