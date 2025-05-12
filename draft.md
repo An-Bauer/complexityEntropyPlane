@@ -1,5 +1,8 @@
 ## Ideas for complexity
 
+>[!NOTE]
+>Das sind nur meine Notizen, damit ich weiß, was ich Ihnen erzählen kann, wenn wir uns treffen.
+
 ### Paper Summary
 - probability distribution for every node  (randome walker)
 - $S$ <- average per node shanon entropy
