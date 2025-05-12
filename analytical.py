@@ -10,11 +10,12 @@ def S(n):
     v[1:] = np.log(np.arange(1,n))
     return v/n/np.log(n) # not n-1 ?
 
-def Q(n,pp):
+def Q(n,e):
     i = np.arange(1,n) # indices
 
-    p = pp**i*(1-pp)**(n-1-i)*comb(n-2,i-1) # ref entry prob
-    p0 = (1-pp) 
+    pb = e*2/n/(n-1)
+    p = pb**i*(1-pb)**(n-1-i)*comb(n-2,i-1) # ref entry prob
+    p0 = (1-pb) 
 
     v1 = np.zeros(n) # S((P+R)/2)
     v1[1:] += -(n-1-i)*np.sum(p[:,None]/2/i[:,None]*np.log(1/2/i[:,None]),axis=0) 
@@ -47,9 +48,6 @@ p = e*2/n/(n-1)
 print(f"n: {n}")
 print(f"p: {p}")
 print(f"S: {np.dot(S(n),d)}")
-print(f"C: {np.dot(S(n),d)*np.dot(Q(n,p),d)}")
-
-# %%
-Q(28,1)
+print(f"C: {np.dot(S(n),d)*np.dot(Q(n,e),d)}")
 
 # %%

@@ -4,7 +4,7 @@ from scipy import stats
 import networkx as nx
 import matplotlib.pyplot as plt
 
-import explicit as ex
+import numerical as nm
 import analytical as an
 
 # %%
@@ -26,7 +26,7 @@ q = np.dot(an.Q(n,p),d)
 
 #%%
 m = 1000
-sample = [ex.Q(G)*s for _ in range(m)]
+sample = [nm.Q(G)*s for _ in range(m)]
 
 t_stat, p_value = stats.ttest_1samp(sample, popmean=q)
 
