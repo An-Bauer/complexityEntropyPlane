@@ -40,7 +40,7 @@
   - contribution of x (1/x) entries
     - $(x)(p_0 (\frac{1}{2x}\ln\frac{1}{2x}) +  \sum_y p_y(\frac{1}{2x}+\frac{1}{2y})\ln(\frac{1}{2x}+\frac{1}{2y}))$
   - contribution of row with rank x
-    - $b_x := (x)(p_0 (\frac{1}{2x}\ln\frac{1}{2x}) +  \sum_y p_y(\frac{1}{2x}+\frac{1}{2y}))+(n-1-x) (p_0 0 + \sum_y p_y (\frac{1}{2y}\ln\frac{1}{2y}))$
+    - $v^1_x := (x)(p_0 (\frac{1}{2x}\ln\frac{1}{2x}) +  \sum_y p_y(\frac{1}{2x}+\frac{1}{2y}))+(n-1-x) (p_0 0 + \sum_y p_y (\frac{1}{2y}\ln\frac{1}{2y}))$
 
   - $S(\frac{P+R_k}{2})/c_Q = \sum_x d_x v^1_x = v^1d$
 
